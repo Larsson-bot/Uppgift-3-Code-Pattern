@@ -41,34 +41,20 @@ namespace Assignment2
                         adapterMain.Run();
                         break;
                     case '4':
+                        Console.Clear();
                         SCMMain scmMain = new();
                         scmMain.Run();
-                        Console.Clear();
+                  
                         break;
                     case 'X' or 'x':
                         loop = false;
+                        Console.WriteLine("Exiting program!");
                         break;
                     default:
                         Console.WriteLine("Incorrect input.");
                         break;
                 }
 
-                //Console.WriteLine("Abstract Factory");
-
-                //Console.WriteLine();
-
-                //Console.WriteLine("Facade");
-
-                //Console.WriteLine();
-
-                //Console.WriteLine("Adapter");
-                //AdapterMain adapterMain = new();
-                //adapterMain.Run();
-                //Console.WriteLine();
-
-                //    Console.WriteLine("State Command Memento");
-                //SCMMain scmMain = new();
-                //scmMain.Run();
             }
         }
     }

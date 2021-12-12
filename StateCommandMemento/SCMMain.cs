@@ -80,25 +80,17 @@ namespace Assignment2.StateCommandMemento
                     case '3':
                         machineMemento.Restore();
                         Console.WriteLine("Machine reset complete. Machine is in off mode.");
+                        Console.WriteLine("Press any key to return to menu.");
+                        Console.ReadKey();
+                        Console.Clear();
                         break;
 
                     case 'x' or 'X':
                         loop = false;
+                        Console.Clear();
                         break;
                 }
             }
-
-            //machineManager.Execute("Hello");
-            //machine.PowerSwitch();
-            //machineManager.Execute("Hello2");
-            //machine.PowerSwitch();
-
-            //machineManager.Execute("Hello3");
-            //Console.WriteLine(machine.MachineState);
-            //machineMemento.Restore();
-
-            //Console.WriteLine(machine.Commands.Count);
-            //Console.WriteLine(machine.MachineState);
         }
     }
 }

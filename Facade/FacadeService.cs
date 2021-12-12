@@ -21,6 +21,7 @@ namespace Assignment2.Facade
         public void Save()
         {
             // Save Word
+        
             Console.WriteLine("Please enter a word with exactly 5 letters.");
             string input = Console.ReadLine();
             if (input.Length != 5)
@@ -30,7 +31,7 @@ namespace Assignment2.Facade
             }
             else
             {
-                Console.WriteLine("Adding word.");
+                Console.WriteLine("Saving word.");
                 one.Add(input[0]);
                 two.Add(input[1]);
                 three.Add(input[2]);
@@ -45,7 +46,7 @@ namespace Assignment2.Facade
             if (one.Count > 0)
             {
                 char[] word = { one.Last(), two.Last(), three.Last(), four.Last(), five.Last() };
-                Console.Write("Printing out: ");
+                Console.Write("Loading word: ");
                 Console.Write(word);
                 Console.WriteLine();
             }

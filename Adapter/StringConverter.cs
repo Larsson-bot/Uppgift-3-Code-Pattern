@@ -10,10 +10,13 @@ namespace Assignment2.Adapter
     {
 
         public PrintingInts PrintingInts { get; set; }
+        public ReturningStrings ReturningStrings { get; set; }
+
 
         public StringConverter()
         {
             PrintingInts = new PrintingInts();
+            ReturningStrings = new ReturningStrings();
         }
 
 
@@ -24,8 +27,20 @@ namespace Assignment2.Adapter
         //}
         public int ConvertStringToInt(string strings)
         {
+            Console.WriteLine($"Converting {strings} to int.");
             var convertedString = Convert.ToInt32(strings);
             return convertedString;
+        }
+
+        public int ConvertStringToInt2()
+        {
+            Console.WriteLine($"Converting {ReturningStrings} to int.");
+            var convertedString = Convert.ToInt32(ReturningStrings);
+            return convertedString;
+        }
+        public void Print()
+        {
+            PrintingInts.Print(ConvertStringToInt2());
         }
     }
 }
